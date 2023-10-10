@@ -86,13 +86,15 @@ article {padding-left: 20px; padding-right: 20px; padding-bottom: 0px;  min-heig
 
 /*media query*/
 @media only screen and (max-width: 999px) {
-    html {font-size: 40px;}
-    header {height: 100px; width: 100%;}
+    html {font-size: 5vh;}
+    header, footer {min-height: 15vh; width: 100vw;}
     .sectionwide, .seciontight {width: 100%; padding: 40px;}
     .margintop {margin-top: 30px;}
     .margintopslight {margin-top: 15px;}
     .margintopdouble {margin-top: 60px;}
     .paddingtopslight {padding-top: 60px;}
+    section, .bluerectangle, .outerbox {min-height: 20vh; width: 100vw;}
+    section > div, article {margin-left: auto; margin-right: auto;}
 }
 @media only screen and (min-width: 1000px) {
     body {background-color: white;} 
