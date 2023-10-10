@@ -1,0 +1,79 @@
+/*import fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital@0;1&display=swap');
+/*reset css*/
+html {box-sizing: border-box; font-size: 15px;} *, *:before, *:after {box-sizing: inherit;} body, h1, h2, h3, h4, h5, h6, p, ol, ul {margin: 0;padding: 0;font-weight: normal;} ol, ul {list-style: none;} img {max-width: 100%;height: auto;} 
+/*animations*/
+@keyframes fadein {from {opacity: 0;} to {opacity: 1;}}
+@keyframes odkaz {from {color: #1f1f1f; background-color: #f8f9fa;} to {color: #f8f9fa; background-color: #1f1f1f;}}
+@keyframes odkaz-dark {from {color: #f8f9fa; background-color: #1f1f1f;} to {color: #1f1f1f ; background-color: #f8f9fa;}}
+@keyframes odkaz-cyan {from {color: #f8f9fa; background-color: #2782af;} to {color: #2782af; background-color: #f8f9fa;}}
+.fading {animation-name: fadein; animation-duration: 0.5s; animation-fill-mode: forwards; animation-timing-function: ease-out;}
+.fadingfaster {animation-name: fadein; animation-duration: 1s; animation-fill-mode: forwards; animation-timing-function: ease-out;}
+.fadingfast {animation-name: fadein; animation-duration: 0.5s; animation-fill-mode: forwards; animation-timing-function: ease-out;}
+.fadingslower {animation-name: fadein; animation-duration: 1.5s; animation-fill-mode: forwards; animation-timing-function: ease-out;}
+.fadingslow {animation-name: fadein; animation-duration: 3s; animation-fill-mode: forwards; animation-timing-function: ease-out;}
+a {color: black; text-decoration: none; font-weight: 600; max-width: fit-content;}
+a:hover, button:hover, h1:hover, h2:hover {animation-name: odkaz; animation-duration: 1.5s; animation-fill-mode: forwards;}
+.navtext:hover, .logo:hover, .ligtlink:hover {animation-name: odkaz-dark; animation-duration: 1.5s; animation-fill-mode: forwards;}
+.link-cyan:hover {animation-name: odkaz-cyan; animation-duration: 1.5s; animation-fill-mode: forwards;}
+/*general*/
+body {background-color: #f8f9fa;} 
+main {max-width: 1000px;min-height: fit-content;  margin-left: auto; margin-right: auto; overflow: hidden;}
+header {height: 60px; max-width: 1000px; margin-left: auto; margin-right: auto; background-color: #1f1f1f;}
+.logo {margin-left: 20px; float: left; height: 30px; padding: 1px 2px 10px 2px; border-radius: 15px; font-size: 2.1rem;font-weight: 900;  overflow: hidden; margin-top: 15px; line-height: 1; border: 2px solid #f8f9fa;}
+.logo:hover {border: 2px solid #1f1f1f;}
+nav {float: right; height: 60px; font-size: 1.25rem; line-height: 0.9; width: 300px; display: flex; flex-direction: row; justify-content: space-between;}
+nav > a {height: 60px; padding: 20px 20px 20px 20px;}
+.navmargin {}
+footer {max-width: 1000px; margin-left: auto; margin-right: auto; height: 100px;}
+.panelfooter {width: 100%; height: 100%;}
+section {overflow: hidden; min-height: fit-content;}
+h1 {font-size: 5.5rem; text-transform: uppercase; font-weight: 700; max-width: fit-content; line-height: 1.25em; padding-top: 10px; line-height: 0.97;}
+h2 {font-size: 2.6rem; text-transform: uppercase; font-weight: 500; max-width: fit-content; padding-top: 10px; line-height: 0.95;}
+h3 {font-size: 2rem;  padding-top: 10px; line-height: 0.97;}
+p {font-family: 'Roboto', sans-serif;}
+.subtext {font-size: 0.8rem;}
+.link {border-left: 5px solid black; margin-bottom: 2px; padding-left: 0.5rem; max-width: fit-content;}
+article {padding-left: 20px; padding-right: 20px; padding-bottom: 0px;  min-height: 50px; background-color: #f8f9fa;}
+.articles {margin-top: 50px;}
+.roboto {font-family: 'Roboto', sans-serif;}
+.bebas {font-family: 'Bebas Neue', sans-serif;}
+.background-cyan {background-color: #2782af;}
+.color-dark {color: #1f1f1f;}
+.background-dark {background-color: #1f1f1f;}
+.background-light {background-color: #f8f9fa;}
+.backgound-white {background-color: white;}
+.color-light {color: #f8f9fa;}
+.margintop {margin-top: 10px;}
+.margintopslight {margin-top: 5px;}
+.margintopdouble {margin-top: 20px;}
+.paddingtopslight {padding-top: 20px;}
+.button {font-size: 1rem; padding-right: 1rem; padding-bottom: 0.5rem; padding-top: 0.5rem; padding-left: 0.7rem;  margin-bottom: 0.5rem; border: 2px solid #1f1f1f; font-weight: 600; margin-bottom: 0.7rem; max-width: fit-content;}
+.borderbottom {border-bottom: 20px solid white; padding-bottom: 80px;}
+.outerbox {min-height: 350px; display: flex; flex-direction: column; justify-content: flex-end; padding-top: 40px;}
+.innerbox {padding: 20px;}
+.articlebuffer {height: 60px; display: block;}
+.bluerectangle {min-height: 300px; display: flex; flex-direction: column; justify-content: flex-start; padding: 20px; padding-top: 60px;}
+.sectiontitle {padding: 20px}
+.rounded {border-radius: 2px;}
+/*media query*/
+@media only screen and (min-width: 1000px) {
+body {background-color: white;} 
+header {background-color: #f8f9fa;}
+main {display: flex; flex-direction: row; flex-wrap: wrap;}
+article {width: 350px; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; border-bottom: 10px solid white; padding-bottom: 20px; padding-top: 50px;}
+.articles {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start;  margin-bottom: 0px;}
+.flexright {display: flex; flex-direction: row; align-items: flex-end; justify-content: flex-end;}
+.flexcolumn {display: flex; flex-direction: column; justify-content: flex-start; padding-top: 50px;}
+.flexrow {display: flex; flex-direction: row; justify-content: space-between;}
+.outerbox {height: 450px;}
+.bluerectangle {min-height: 450px; padding-top: 40px;}
+.halfwidth {max-width: 280px;}
+.sectionwide {width: 700px;}
+.sectiontight {width: 300px;}
+.alignright {text-align: right;}
+.articlebuffer {display: none;}
+.borderbottom {border-bottom: none;}
+.panelfooter {float: right; width: 300px;}
+.panelbottom {border-bottom: 10px solid #1f1f1f;}}
