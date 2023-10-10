@@ -87,7 +87,7 @@ article {padding-left: 20px; padding-right: 20px; padding-bottom: 0px;  min-heig
 /*media query*/
 @media only screen and (max-width: 999px) {
     html {font-size: 40px;}
-    header {height: 100px}
+    header {height: 100px;}
 }
 @media only screen and (min-width: 1000px) {
     body {background-color: white;} 
