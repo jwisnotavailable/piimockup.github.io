@@ -87,7 +87,12 @@ article {padding-left: 20px; padding-right: 20px; padding-bottom: 0px;  min-heig
 /*media query*/
 @media only screen and (max-width: 999px) {
     html {font-size: 40px;}
-    header {height: 100px;}
+    header {height: 100px; width: 100%;}
+    .sectionwide, .seciontight {width: 100%; padding: 40px;}
+    .margintop {margin-top: 30px;}
+    .margintopslight {margin-top: 15px;}
+    .margintopdouble {margin-top: 60px;}
+    .paddingtopslight {padding-top: 60px;}
 }
 @media only screen and (min-width: 1000px) {
     body {background-color: white;} 
