@@ -42,7 +42,7 @@ a:hover, button:hover, h1:hover, h2:hover {animation-name: odkaz; animation-dura
 body {background-color: #f8f9fa;} 
 main {max-width: 1000px;min-height: fit-content;  margin-left: auto; margin-right: auto; overflow: hidden;}
 header {height: 60px; max-width: 1000px; margin-left: auto; margin-right: auto; background-color: #1f1f1f;}
-    .logo {margin-left: 20px; float: left; height: 30px; padding: 5px 2px 10px 2px; border-radius: 15px; font-size: 25px;font-weight: 900;  overflow: hidden; margin-top: 15px; line-height: 1; border: 2px solid #f8f9fa;}
+    .logo {margin-left: 20px; float: left; height: 30px; padding: 1px 2px 10px 2px; border-radius: 15px; font-size: 30px;font-weight: 900;  overflow: hidden; margin-top: 15px; line-height: 1; border: 2px solid #f8f9fa;}
     .logo:hover {border: 2px solid #1f1f1f;}
     nav {float: right; height: 60px; font-size: 1.25rem; line-height: 0.9; width: 300px; display: flex; flex-direction: row; justify-content: space-between;}
         nav > a {height: 60px; padding: 20px 20px 20px 20px;}
