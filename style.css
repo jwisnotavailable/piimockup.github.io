@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital@0;1&display=swap');
 
 /*reset css*/
-html {box-sizing: border-box; font-size: 15px;} *, *:before, *:after {box-sizing: inherit;} body, h1, h2, h3, h4, h5, h6, p, ol, ul {margin: 0;padding: 0;font-weight: normal;} ol, ul {list-style: none;} img {max-width: 100%;height: auto;} 
+html {box-sizing: border-box; font-size: 3vh;} *, *:before, *:after {box-sizing: inherit;} body, h1, h2, h3, h4, h5, h6, p, ol, ul {margin: 0;padding: 0;font-weight: normal;} ol, ul {list-style: none;} img {max-width: 100%;height: auto;} 
 
 /*animations*/
 @keyframes fadein {
@@ -42,9 +42,9 @@ a:hover, button:hover, h1:hover, h2:hover {animation-name: odkaz; animation-dura
 body {background-color: #f8f9fa;} 
 main {width: 100vw; min-height: fit-content; overflow: hidden; display: flex; flex-direction: column;}
 header {height: 60px; margin-left: auto; margin-right: auto; background-color: #1f1f1f;}
-    .logo {margin-left: 20px; float: left; height: 30px; padding: 1px 2px 10px 2px; border-radius: 15px; font-size: 30px;font-weight: 900;  overflow: hidden; margin-top: 15px; line-height: 1; border: 2px solid #f8f9fa;}
+    .logo {margin-left: 20px; float: left; height: 30px; padding: 1px 2px 10px 2px; border-radius: 15px; font-size: 32px;font-weight: 900;  overflow: hidden; margin-top: 15px; line-height: 1; border: 2px solid #f8f9fa;}
     .logo:hover {border: 2px solid #1f1f1f;}
-    nav {float: right; height: 60px; font-size: 1.25rem; line-height: 0.9; width: 300px; display: flex; flex-direction: row; justify-content: space-between;}
+    nav {float: right; height: 60px; font-size: 20px; line-height: 0.9; width: 300px; display: flex; flex-direction: row; justify-content: space-between;}
         nav > a {height: 60px; padding: 20px 20px 20px 20px;}
     .navmargin {}
 footer {margin-left: auto; margin-right: auto; height: 100px;}
@@ -79,7 +79,7 @@ article {padding-left: 20px; padding-right: 20px; padding-bottom: 0px;  min-heig
 .outerbox {min-height: 350px; display: flex; flex-direction: column; justify-content: flex-end; padding-top: 40px;}
 .innerbox {padding: 20px;}
 .articlebuffer {height: 60px; display: block;}
-.bluerectangle {min-height: 300px; display: flex; flex-direction: column; justify-content: flex-start; padding: 20px; padding-top: 60px;}
+.bluerectangle {min-height: 300px; display: flex; flex-direction: column; justify-content: flex-start; padding: 60px 20px 100px 20px;}
 .sectiontitle {padding: 20px}
 .rounded {border-radius: 2px;}
 
@@ -99,6 +99,7 @@ article {padding-left: 20px; padding-right: 20px; padding-bottom: 0px;  min-heig
 }*/
 
 @media only screen and (orientation: landscape) {
+    html {font-size: 15px;}
     body {background-color: white;} 
     header {background-color: #f8f9fa; max-width: 1000px;}
     footer {max-width: 1000px;}
