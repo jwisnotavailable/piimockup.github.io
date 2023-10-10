@@ -51,7 +51,7 @@ footer {margin-left: auto; margin-right: auto; height: 100px;}
     .panelfooter {width: 100%; height: 100%;}
 
 section {overflow: hidden; min-height: fit-content;}
-h1 {font-size: 5.5rem; text-transform: uppercase; font-weight: 700; max-width: fit-content; line-height: 1.25em; padding-top: 10px; line-height: 0.97;}
+h1 {font-size: 5.25rem; text-transform: uppercase; font-weight: 700; max-width: fit-content; line-height: 1.25em; padding-top: 10px; line-height: 0.97;}
 h2 {font-size: 2.6rem; text-transform: uppercase; font-weight: 500; max-width: fit-content; padding-top: 10px; line-height: 0.95;}
 h3 {font-size: 2rem;  padding-top: 10px; line-height: 0.97;}
 p {font-family: 'Roboto', sans-serif;}
