@@ -80,8 +80,8 @@ article {padding-left: 20px; padding-right: 20px; padding-bottom: 0px;  min-heig
 .innerbox {padding: 20px;}
 .articlebuffer {height: 60px; display: block;}
 .bluerectangle {min-height: 300px; display: flex; flex-direction: column; justify-content: flex-start; padding: 60px 20px 100px 20px;}
-.sectiontitle {padding: 20px}
 .rounded {border-radius: 2px;}
+.sectionwide, .sectiontight {min-height: 30vh; padding: 10vh 2vw 10vh 2vw;}
 
 
 /*media query
@@ -113,8 +113,8 @@ article {padding-left: 20px; padding-right: 20px; padding-bottom: 0px;  min-heig
     .outerbox {height: 450px;}
     .bluerectangle {min-height: 450px; padding-top: 40px;}
     .halfwidth {max-width: 280px;}
-    .sectionwide {width: 700px;}
-    .sectiontight {width: 300px;}
+    .sectionwide {width: 700px; padding: 0px 0px 0px 0px;}
+    .sectiontight {width: 300px; padding: 0px 0px 0px 0px;}
     .alignright {text-align: right;}
     .articlebuffer {display: none;}
     .borderbottom {border-bottom: none;}
