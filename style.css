@@ -98,7 +98,7 @@ article {padding-left: 20px; padding-right: 20px; padding-bottom: 0px;  min-heig
     section > div, article {margin-left: auto; margin-right: auto;}
 }*/
 
-@media only screen and (orientation: landscape) {
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
     html {font-size: 15px;}
     body {background-color: white;} 
     header {background-color: #f8f9fa; max-width: 1000px;}
