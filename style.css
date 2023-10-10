@@ -86,7 +86,7 @@ article {padding-left: 20px; padding-right: 20px; padding-bottom: 0px;  min-heig
 
 /*media query*/
 @media only screen and (max-width: 999px) {
-    html {font-size: 5vh;}
+    html {font-size: 3vh;}
     header, footer {min-height: 15vh; width: 100vw;}
     .sectionwide, .seciontight {width: 100%; padding: 40px;}
     .margintop {margin-top: 30px;}
