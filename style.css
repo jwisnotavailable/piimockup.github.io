@@ -81,7 +81,7 @@ article {padding-left: 20px; padding-right: 20px; padding-bottom: 0px;  min-heig
 .articlebuffer {height: 60px; display: block;}
 .bluerectangle {min-height: 300px; display: flex; flex-direction: column; justify-content: flex-start; padding: 60px 20px 100px 20px;}
 .rounded {border-radius: 2px;}
-.sectionwide, .sectiontight {min-height: 30vh; padding: 10vh 2vw 10vh 2vw;}
+.sectionwide, .bluerectangle {min-height: 30vh; padding: 10vh 2vw 10vh 2vw;}
 
 
 /*media query
