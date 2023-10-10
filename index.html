@@ -1,88 +1,57 @@
 <!DOCTYPE html>
 <html>
-
 <!-- This is a live presentation of a website facelift for https://pii.cz/
-
 The code might be a bit messy in places. 
 The main goal here has been experimenting with layouts and having the presentation live and running. 
 The final production will not happen with the use of raw CSS, but rather using tailwind-css.
-
 Please, excuse the mess.
 -->
-
 <head>
-    <meta charset="UTF-8" />
-    <title>title</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    <style>
-
+<meta charset="UTF-8" />
+<title>title</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+<style>
 /*import fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital@0;1&display=swap');
-
 /*reset css*/
 html {box-sizing: border-box; font-size: 15px;} *, *:before, *:after {box-sizing: inherit;} body, h1, h2, h3, h4, h5, h6, p, ol, ul {margin: 0;padding: 0;font-weight: normal;} ol, ul {list-style: none;} img {max-width: 100%;height: auto;} 
-
 /*animations*/
-@keyframes fadein {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes odkaz {
-    from {color: #1f1f1f; background-color: #f8f9fa;}
-    to {color: #f8f9fa; background-color: #1f1f1f;}
-}
-
-@keyframes odkaz-dark {
-    from {color: #f8f9fa; background-color: #1f1f1f;}
-    to {color: #1f1f1f ; background-color: #f8f9fa;}
-}
-
-@keyframes odkaz-cyan {
-    from {color: #f8f9fa; background-color: #2782af;}
-    to {color: #2782af; background-color: #f8f9fa;}
-}
-
-
+@keyframes fadein {from {opacity: 0;} to {opacity: 1;}}
+@keyframes odkaz {from {color: #1f1f1f; background-color: #f8f9fa;} to {color: #f8f9fa; background-color: #1f1f1f;}}
+@keyframes odkaz-dark {from {color: #f8f9fa; background-color: #1f1f1f;} to {color: #1f1f1f ; background-color: #f8f9fa;}}
+@keyframes odkaz-cyan {from {color: #f8f9fa; background-color: #2782af;} to {color: #2782af; background-color: #f8f9fa;}}
 .fading {animation-name: fadein; animation-duration: 0.5s; animation-fill-mode: forwards; animation-timing-function: ease-out;}
 .fadingfaster {animation-name: fadein; animation-duration: 1s; animation-fill-mode: forwards; animation-timing-function: ease-out;}
 .fadingfast {animation-name: fadein; animation-duration: 0.5s; animation-fill-mode: forwards; animation-timing-function: ease-out;}
 .fadingslower {animation-name: fadein; animation-duration: 1.5s; animation-fill-mode: forwards; animation-timing-function: ease-out;}
 .fadingslow {animation-name: fadein; animation-duration: 3s; animation-fill-mode: forwards; animation-timing-function: ease-out;}
-
 a {color: black; text-decoration: none; font-weight: 600; max-width: fit-content;}
 a:hover, button:hover, h1:hover, h2:hover {animation-name: odkaz; animation-duration: 1.5s; animation-fill-mode: forwards;}
 .navtext:hover, .logo:hover, .ligtlink:hover {animation-name: odkaz-dark; animation-duration: 1.5s; animation-fill-mode: forwards;}
 .link-cyan:hover {animation-name: odkaz-cyan; animation-duration: 1.5s; animation-fill-mode: forwards;}
-
 /*general*/
 body {background-color: #f8f9fa;} 
 main {max-width: 1000px;min-height: fit-content;  margin-left: auto; margin-right: auto; overflow: hidden;}
 header {height: 60px; max-width: 1000px; margin-left: auto; margin-right: auto; background-color: #1f1f1f;}
-    .logo {margin-left: 20px; float: left; height: 30px; padding: 1px 2px 10px 2px; border-radius: 15px; font-size: 2.1rem;font-weight: 900;  overflow: hidden; margin-top: 15px; line-height: 1; border: 2px solid #f8f9fa;}
-    .logo:hover {border: 2px solid #1f1f1f;}
-    nav {float: right; height: 60px; font-size: 1.25rem; line-height: 0.9; width: 300px; display: flex; flex-direction: row; justify-content: space-between;}
-        nav > a {height: 60px; padding: 20px 20px 20px 20px;}
-    .navmargin {}
+.logo {margin-left: 20px; float: left; height: 30px; padding: 1px 2px 10px 2px; border-radius: 15px; font-size: 2.1rem;font-weight: 900;  overflow: hidden; margin-top: 15px; line-height: 1; border: 2px solid #f8f9fa;}
+.logo:hover {border: 2px solid #1f1f1f;}
+nav {float: right; height: 60px; font-size: 1.25rem; line-height: 0.9; width: 300px; display: flex; flex-direction: row; justify-content: space-between;}
+nav > a {height: 60px; padding: 20px 20px 20px 20px;}
+.navmargin {}
 footer {max-width: 1000px; margin-left: auto; margin-right: auto; height: 100px;}
-    .panelfooter {width: 100%; height: 100%;}
-
+.panelfooter {width: 100%; height: 100%;}
 section {overflow: hidden; min-height: fit-content;}
 h1 {font-size: 5.5rem; text-transform: uppercase; font-weight: 700; max-width: fit-content; line-height: 1.25em; padding-top: 10px; line-height: 0.97;}
 h2 {font-size: 2.6rem; text-transform: uppercase; font-weight: 500; max-width: fit-content; padding-top: 10px; line-height: 0.95;}
 h3 {font-size: 2rem;  padding-top: 10px; line-height: 0.97;}
 p {font-family: 'Roboto', sans-serif;}
-    .subtext {font-size: 0.8rem;}
-    .link {border-left: 5px solid black; margin-bottom: 2px; padding-left: 0.5rem; max-width: fit-content;}
+.subtext {font-size: 0.8rem;}
+.link {border-left: 5px solid black; margin-bottom: 2px; padding-left: 0.5rem; max-width: fit-content;}
 article {padding-left: 20px; padding-right: 20px; padding-bottom: 0px;  min-height: 50px; background-color: #f8f9fa;}
-
 .articles {margin-top: 50px;}
-
 .roboto {font-family: 'Roboto', sans-serif;}
 .bebas {font-family: 'Bebas Neue', sans-serif;}
-
 .background-cyan {background-color: #2782af;}
 .color-dark {color: #1f1f1f;}
 .background-dark {background-color: #1f1f1f;}
@@ -101,164 +70,139 @@ article {padding-left: 20px; padding-right: 20px; padding-bottom: 0px;  min-heig
 .bluerectangle {min-height: 300px; display: flex; flex-direction: column; justify-content: flex-start; padding: 20px; padding-top: 60px;}
 .sectiontitle {padding: 20px}
 .rounded {border-radius: 2px;}
-
-
 /*media query*/
 @media only screen and (min-width: 1000px) {
-    body {background-color: white;} 
-    header {background-color: #f8f9fa;}
-    main {display: flex; flex-direction: row; flex-wrap: wrap;}
-    article {width: 350px; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; border-bottom: 10px solid white; padding-bottom: 20px; padding-top: 50px;}
-    .articles {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start;  margin-bottom: 0px;}
-    .flexright {display: flex; flex-direction: row; align-items: flex-end; justify-content: flex-end;}
-    .flexcolumn {display: flex; flex-direction: column; justify-content: flex-start; padding-top: 50px;}
-    .flexrow {display: flex; flex-direction: row; justify-content: space-between;}
-    .outerbox {height: 450px;}
-    .bluerectangle {min-height: 450px; padding-top: 40px;}
-    .halfwidth {max-width: 280px;}
-    .sectionwide {width: 700px;}
-    .sectiontight {width: 300px;}
-    .alignright {text-align: right;}
-    .articlebuffer {display: none;}
-    .borderbottom {border-bottom: none;}
-    .panelfooter {float: right; width: 300px;}
-    .panelbottom {border-bottom: 10px solid #1f1f1f;}
-}
-
-
-    </style>
+body {background-color: white;} 
+header {background-color: #f8f9fa;}
+main {display: flex; flex-direction: row; flex-wrap: wrap;}
+article {width: 350px; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; border-bottom: 10px solid white; padding-bottom: 20px; padding-top: 50px;}
+.articles {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start;  margin-bottom: 0px;}
+.flexright {display: flex; flex-direction: row; align-items: flex-end; justify-content: flex-end;}
+.flexcolumn {display: flex; flex-direction: column; justify-content: flex-start; padding-top: 50px;}
+.flexrow {display: flex; flex-direction: row; justify-content: space-between;}
+.outerbox {height: 450px;}
+.bluerectangle {min-height: 450px; padding-top: 40px;}
+.halfwidth {max-width: 280px;}
+.sectionwide {width: 700px;}
+.sectiontight {width: 300px;}
+.alignright {text-align: right;}
+.articlebuffer {display: none;}
+.borderbottom {border-bottom: none;}
+.panelfooter {float: right; width: 300px;}
+.panelbottom {border-bottom: 10px solid #1f1f1f;}}
+</style>
 </head>
 
 <body>
-    <header class="head">
-        <a class="logo bebas color-light background-dark">Π</a>
-        <nav class="navigation background-dark">
-            <a class="navtext color-light bebas">události</a>
-            <a class="navtext color-light bebas navmargin">témata</a>
-            <a class="navtext color-light bebas navmargin">institut</a>
-        </nav>
-    </header>
-
-    <main>
-       
-
-        <section class="square roboto color-dark fivehundred outerbox backgound-white sectionwide">
-            
-            <div class="innerbox fading">
-                <div class="halfwidth" style="margin-left: 2px;">
-                    <p>V&nbsp;českém veřejném prostoru téma redefinice znásilnění rezonuje už nějakou dobu a&nbsp;Institut&nbsp;π pozval odborníky na sexualizované násilí z&nbsp;lidskoprávních organizací a&nbsp;oblasti práva, aby společně diskutovali o&nbsp;stávající definici znásilnění v&nbsp;českém právu, možných nápravách a&nbsp;konkrétních příkladech z&nbsp;praxe panelistů.</p>
-                </div>
-                <h1 class="bebas margintop fadingslower rounded" style="margin-left: -1px;">Redefinice znásilnění</h1>
-                <div class="halfwidth">
-                    <p class="subtext link roboto">Klára Kadár, Irena Hůlová, JUDr.&nbsp;Daniel Bartoň,&nbsp;LL.M. (Cantab), Ph.D.</p>
-                    <p class="subtext link roboto">12. října 2023 v 16:00</p>
-                    <p class="subtext link roboto">Skautský institut, Staroměstské náměstí v&nbsp;Praze</p>               
-                </div>
-                <div class="bottombutton" style="margin-top: 5px;">
-                    <button class="button background-light color-dark roboto rounded">
-                        &#8627více
-                    </button>
-                </div>
-            </div>    
-           
-        </section>
-
-        <section class="slideinright outerbox flexright sectiontight">
-                <div class="bluerectangle background-cyan color-light">
-
-                    <h3 class="bebas">Pozvánky na akce institutu získáte přihlášením k <span class="">odběru zpráv emailem:</span></h3>
-                    <input type="text" placeholder="váš@email" class="roboto margintop" style="max-width: 370px;">
-                    <h3 class="bebas margintopslight" style="padding-top: 30px;">Novinky sledujte na:</h2>
-                    <div class="color-light flexrow margintop">
-                        <i class="fa-brands fa-mastodon fa-2x link-cyan rounded"></i>
-                        <i class="fa-brands fa-twitter fa-2x link-cyan rounded"></i>
-                        <i class="fa-brands fa-facebook fa-2x link-cyan rounded"></i>
-                        <i class="fa-brands fa-linkedin fa-2x link-cyan rounded"></i>
-                        <i class="fa fa-rss fa-2x link-cyan rounded"></i>
-                    </div>
-                </div>
-        </section>
-            
-        <section class="articles sectionwide">
-          
-            <article>
-                <div class="articlebuffer"></div>
-                <div class="">
-                    <h2 class="bebas rounded">Participace voličů a stranický systém v ČR od rozdělení federace do roku 2002</h2>
-                    <a class="subtext link roboto">Jakub Wolf</a>
-                </div>
-            </article>  
-            <article>
-                <div>
-                    <p class="margintop borderbottom ">Česká společnost první poloviny 90. let se vyznačovala značným zájmem o politiku. Tento zájem ale do roku 2002 značně opadl. Souběžně s tím, jak se utvářel stranický systém, založený na soupeření dominantní pravicové a levicové strany, klesal i zájem občanů o politiku.</p>
-                </div>
-            </article>
-
-            <article>
-                <div class="articlebuffer"></div>
-                <div>
-                    <h2 class="bebas rounded">Současný stranický systém v ČR</h2>
-                    <a class="subtext link roboto">Jakub Wolf</a>
-                </div>
-
-            </article>
-            <article>
-                <div>
-                    <p class="margintop borderbottom ">Prvního března 2023 proběhla v Pirátském centru v Praze diskuse,  organizovaná Institutem Π a věnovaná Pirátům na politické mapě ČR. A to  jak ve smyslu geograficko-demografickém, tak ve smyslu čistě politickém.  Tedy pokud jde o pozici Pirátů vůči ostatním politickým stranám.</p>
-                </div>
-            </article>
-
-            <article>
-                <div class="articlebuffer"></div>
-                <div>
-                    <h2 class="bebas rounded">Média veřejné služby ve 21. století – Co je veřejná služba?</h2>
-                    <a class="subtext link roboto">Jakub Wolf</a>
-                </div>
-            </article>
-            <article>
-                <div>
-                    <p class="margintop borderbottom ">Dne 12. dubna 2023 proběhla v Pirátském centru v Praze panelová diskuse o médiích veřejné služby ve 21. století, spolupořádaná Institutem Π a Piráty Praha. Jedním z témat bylo samotné vymezení veřejné služby v zákonech o ČT a ČRo a dopad technologických a společenských změn na toto vymezení.</p>
-                </div>
-            </article>
-
-            <article>
-                <div class="articlebuffer"></div>
-                <div>
-                    <h2 class="bebas rounded">Digitálna etika</h2>
-                    <a class="subtext link roboto">Sabina Bieliková</a>
-                </div>
-            </article>
-            <article>
-                <div>
-                    <p class="margintop borderbottom ">Sloboda prístupu k informáciám, sloboda prejavu a možnosť vyhodnocovať pravdivosť informácií a na základe nich sa rozhodovať patria k základným pilierom demokratickej spoločnosti.</p>
-                </div>
-            </article>
-        </section>          
-
-        <section class="sectiontight flexcolumn background-cyan color-light panelbottom" style="padding-top: 70px; padding-bottom: 80px;">
-            <div class="innerbox margintopdouble">
-                <p><span style="font-weight: 700;">Institut&nbsp;π</span> je politickým institutem založeným <span style="font-weight: 700;">Českou pirátskou stranou.</span></p>
-                <p class="margintopdouble">Iniciuje a rozvíjí diskurz o&nbsp;obtížných a&nbsp;pro životaschopnost demokratické společnosti důležitých otázkách. Podílí se na nacházení možných řešení, analyzuje výhody a&nbsp;nevýhody různých přístupů a&nbsp;alternativ, otevírá diskuzi o&nbsp;nich a&nbsp;pomáhá je uskutečňovat.</p>
-                <p class="margintopdouble">Práce institutu je otevřená a&nbsp;inkluzivní. Institut vytváří živnou půdu pro práci a&nbsp;iniciativu odborníků i&nbsp;dobrovolníků napříč obory, včetně spolupráce s&nbsp;občanskými aktivisty a&nbsp;organizacemi, a&nbsp;to i&nbsp;mezinárodně.</p>
-            </div>
-            <div class="innerbox">
-                <h4 class="bebas">Adresa</h4>
-                <p class="roboto margintop">Na Moráni 360/3, 128 00 Praha</p>
-                <h4 class="bebas margintop">Pobočka</h4>
-                <p class="roboto margintop">Peroutkova 290/5, 602 00 Brno</p>
-                <h4 class="bebas margintop">Datová schránka</h4>
-                <p class="roboto margintop">48xmvrp</p>
-                <h4 class="bebas margintop">Email</h4>
-                <p class="link-cyan roboto margintop rounded" style="max-width: fit-content;">info@pii.cz</p>
-            </div>
-        </section>
-
-    </main>
-
-        <footer>
-            <div class="panelfooter background-dark"></div>
-        </footer>
-
+<header class="head">
+<a class="logo bebas color-light background-dark">Π</a>
+<nav class="navigation background-dark">
+<a class="navtext color-light bebas">události</a>
+<a class="navtext color-light bebas navmargin">témata</a>
+<a class="navtext color-light bebas navmargin">institut</a>
+</nav>
+</header>
+<main>
+<section class="square roboto color-dark fivehundred outerbox backgound-white sectionwide">
+<div class="innerbox fading">
+<div class="halfwidth" style="margin-left: 2px;">
+<p>V&nbsp;českém veřejném prostoru téma redefinice znásilnění rezonuje už nějakou dobu a&nbsp;Institut&nbsp;π pozval odborníky na sexualizované násilí z&nbsp;lidskoprávních organizací a&nbsp;oblasti práva, aby společně diskutovali o&nbsp;stávající definici znásilnění v&nbsp;českém právu, možných nápravách a&nbsp;konkrétních příkladech z&nbsp;praxe panelistů.</p>
+</div>
+<h1 class="bebas margintop fadingslower rounded" style="margin-left: -1px;">Redefinice znásilnění</h1>
+<div class="halfwidth">
+<p class="subtext link roboto">Klára Kadár, Irena Hůlová, JUDr.&nbsp;Daniel Bartoň,&nbsp;LL.M. (Cantab), Ph.D.</p>
+<p class="subtext link roboto">12. října 2023 v 16:00</p>
+<p class="subtext link roboto">Skautský institut, Staroměstské náměstí v&nbsp;Praze</p>               
+</div>
+<div class="bottombutton" style="margin-top: 5px;">
+<button class="button background-light color-dark roboto rounded">&#8627více</button>
+</div>
+</div>    
+</section>
+<section class="slideinright outerbox flexright sectiontight">
+<div class="bluerectangle background-cyan color-light">
+<h3 class="bebas">Pozvánky na akce institutu získáte přihlášením k <span class="">odběru zpráv emailem:</span></h3>
+<input type="text" placeholder="váš@email" class="roboto margintop" style="max-width: 370px;">
+<h3 class="bebas margintopslight" style="padding-top: 30px;">Novinky sledujte na:</h2>
+<div class="color-light flexrow margintop">
+<i class="fa-brands fa-mastodon fa-2x link-cyan rounded"></i>
+<i class="fa-brands fa-twitter fa-2x link-cyan rounded"></i>
+<i class="fa-brands fa-facebook fa-2x link-cyan rounded"></i>
+<i class="fa-brands fa-linkedin fa-2x link-cyan rounded"></i>
+<i class="fa fa-rss fa-2x link-cyan rounded"></i>
+</div>
+</div>
+</section>
+<section class="articles sectionwide">
+<article>
+<div class="articlebuffer"></div>
+<div class="">
+<h2 class="bebas rounded">Participace voličů a stranický systém v ČR od rozdělení federace do roku 2002</h2>
+<a class="subtext link roboto">Jakub Wolf</a>
+</div>
+</article>  
+<article>
+<div>
+<p class="margintop borderbottom ">Česká společnost první poloviny 90. let se vyznačovala značným zájmem o politiku. Tento zájem ale do roku 2002 značně opadl. Souběžně s tím, jak se utvářel stranický systém, založený na soupeření dominantní pravicové a levicové strany, klesal i zájem občanů o politiku.</p>
+</div>
+</article>
+<article>
+<div class="articlebuffer"></div>
+<div>
+<h2 class="bebas rounded">Současný stranický systém v ČR</h2>
+<a class="subtext link roboto">Jakub Wolf</a>
+</div>
+</article>
+<article>
+<div>
+<p class="margintop borderbottom ">Prvního března 2023 proběhla v Pirátském centru v Praze diskuse,  organizovaná Institutem Π a věnovaná Pirátům na politické mapě ČR. A to  jak ve smyslu geograficko-demografickém, tak ve smyslu čistě politickém.  Tedy pokud jde o pozici Pirátů vůči ostatním politickým stranám.</p>
+</div>
+</article>
+<article>
+<div class="articlebuffer"></div>
+<div>
+<h2 class="bebas rounded">Média veřejné služby ve 21. století – Co je veřejná služba?</h2>
+<a class="subtext link roboto">Jakub Wolf</a>
+</div>
+</article>
+<article>
+<div>
+<p class="margintop borderbottom ">Dne 12. dubna 2023 proběhla v Pirátském centru v Praze panelová diskuse o médiích veřejné služby ve 21. století, spolupořádaná Institutem Π a Piráty Praha. Jedním z témat bylo samotné vymezení veřejné služby v zákonech o ČT a ČRo a dopad technologických a společenských změn na toto vymezení.</p>
+</div>
+</article>
+<article>
+<div class="articlebuffer"></div>
+<div>
+<h2 class="bebas rounded">Digitálna etika</h2>
+<a class="subtext link roboto">Sabina Bieliková</a>
+</div>
+</article>
+<article>
+<div>
+<p class="margintop borderbottom ">Sloboda prístupu k informáciám, sloboda prejavu a možnosť vyhodnocovať pravdivosť informácií a na základe nich sa rozhodovať patria k základným pilierom demokratickej spoločnosti.</p>
+</div>
+</article>
+</section>          
+<section class="sectiontight flexcolumn background-cyan color-light panelbottom" style="padding-top: 70px; padding-bottom: 80px;">
+<div class="innerbox margintopdouble">
+<p><span style="font-weight: 700;">Institut&nbsp;π</span> je politickým institutem založeným <span style="font-weight: 700;">Českou pirátskou stranou.</span></p>
+<p class="margintopdouble">Iniciuje a rozvíjí diskurz o&nbsp;obtížných a&nbsp;pro životaschopnost demokratické společnosti důležitých otázkách. Podílí se na nacházení možných řešení, analyzuje výhody a&nbsp;nevýhody různých přístupů a&nbsp;alternativ, otevírá diskuzi o&nbsp;nich a&nbsp;pomáhá je uskutečňovat.</p>
+<p class="margintopdouble">Práce institutu je otevřená a&nbsp;inkluzivní. Institut vytváří živnou půdu pro práci a&nbsp;iniciativu odborníků i&nbsp;dobrovolníků napříč obory, včetně spolupráce s&nbsp;občanskými aktivisty a&nbsp;organizacemi, a&nbsp;to i&nbsp;mezinárodně.</p>
+</div>
+<div class="innerbox">
+<h4 class="bebas">Adresa</h4>
+<p class="roboto margintop">Na Moráni 360/3, 128 00 Praha</p>
+<h4 class="bebas margintop">Pobočka</h4>
+<p class="roboto margintop">Peroutkova 290/5, 602 00 Brno</p>
+<h4 class="bebas margintop">Datová schránka</h4>
+<p class="roboto margintop">48xmvrp</p>
+<h4 class="bebas margintop">Email</h4>
+<p class="link-cyan roboto margintop rounded" style="max-width: fit-content;">info@pii.cz</p>
+</div>
+</section>
+</main>
+<footer>
+<div class="panelfooter background-dark"></div>
+</footer>
 </body>
-
 </html>
