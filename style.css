@@ -59,7 +59,8 @@ article {padding-left: 20px; padding-right: 20px; padding-bottom: 0px;  min-heig
 .rounded {border-radius: 2px;}
 /*media query*/
 @media only screen and (min-width: 1000px) {
-body {background-color: white; font-size: 15px;} 
+hmtl {font-size: 15px;}
+body {background-color: white;} 
 header {background-color: #f8f9fa;}
 main {display: flex; flex-direction: row; flex-wrap: wrap;}
 article {width: 350px; height: 300px; display: flex; flex-direction: column; justify-content: flex-start; border-bottom: 10px solid white; padding-bottom: 20px; padding-top: 50px;}
@@ -77,4 +78,5 @@ article {width: 350px; height: 300px; display: flex; flex-direction: column; jus
 .borderbottom {border-bottom: none;}
 .panelfooter {float: right; width: 300px;}
 .panelbottom {border-bottom: 10px solid #1f1f1f;}}
-@media only screen (min-width: 1000px) and (max-width: 2000px) {font-size: 20px;}
+@media only screen (min-width: 1000px) and (max-width: 2000px) {
+html {font-size: 20px;}}
