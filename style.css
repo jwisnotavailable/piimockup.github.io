@@ -40,7 +40,7 @@ a:hover, button:hover, h1:hover, h2:hover {animation-name: odkaz; animation-dura
 
 /*general*/
 body {background-color: #f8f9fa;} 
-main {max-width: 1000px;min-height: fit-content;  margin-left: auto; margin-right: auto; overflow: hidden;}
+main {max-width: 1000px; min-height: fit-content;  margin-left: auto; margin-right: auto; overflow: hidden;}
 header {height: 60px; max-width: 1000px; margin-left: auto; margin-right: auto; background-color: #1f1f1f;}
     .logo {margin-left: 20px; float: left; height: 30px; padding: 1px 2px 10px 2px; border-radius: 15px; font-size: 30px;font-weight: 900;  overflow: hidden; margin-top: 15px; line-height: 1; border: 2px solid #f8f9fa;}
     .logo:hover {border: 2px solid #1f1f1f;}
@@ -87,13 +87,14 @@ article {padding-left: 20px; padding-right: 20px; padding-bottom: 0px;  min-heig
 /*media query*/
 @media only screen and (max-width: 999px) {
     html {font-size: 3vh;}
+    main {width: 100vw;}
     header, footer {min-height: 15vh; width: 100vw;}
     .sectionwide, .seciontight {width: 100%; padding: 40px;}
     .margintop {margin-top: 30px;}
     .margintopslight {margin-top: 15px;}
     .margintopdouble {margin-top: 60px;}
     .paddingtopslight {padding-top: 60px;}
-    section, .bluerectangle, .outerbox {min-height: 20vh; width: 100vw;}
+    section, .bluerectangle, .outerbox {min-height: 20vh; width: 100vw; padding-top: 5vh; padding-bottom: 5vh;}
     section > div, article {margin-left: auto; margin-right: auto;}
 }
 @media only screen and (min-width: 1000px) {
